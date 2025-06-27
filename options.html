@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Extension Options</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #ff6f61;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ff6f61;
+      border-radius: 8px;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    input[type="text"]:focus {
+      border-color: #ff4c3b;
+      box-shadow: 0 0 5px #ff4c3b44;
+    }
+
+    small {
+      font-size: 13px;
+      color: #666;
+    }
+
+    a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ff4c3b;
+    }
+
+    .success-message {
+      margin-top: 15px;
+      color: #28a745;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Summary Settings</h1>
+
+  <div class="form-group">
+    <label for="api-key">Gemini API Key</label>
+    <input type="text" id="api-key" placeholder="Enter your Gemini API Key" />
+    <p>
+      <small>
+        You can get your API key from the
+        <a href="https://makersuite.google.com/app/apikey" target="_blank">
+          Gemini AI Developer Console
+        </a>.
+        Make sure to keep it secure and do not share it publicly.
+      </small>
+    </p>
+  </div>
+
+  <button id="save-button">Save Settings</button>
+  <p id="success-message" class="success-message">Settings saved successfully!</p>
+
+  <script src="options.js"></script>
+</body>
+</html>

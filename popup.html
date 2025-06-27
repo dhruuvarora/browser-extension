@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Summarizer</title>
+
+  <style>
+    html, body {
+      width: 500px;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      margin-bottom: 15px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #fff;
+      color: #333;
+      border: 2px solid #ff6f61;
+      border-radius: 8px;
+      outline: none;
+      width: 100%;
+      max-width: 250px;
+      transition: box-shadow 0.2s ease;
+    }
+
+    select:focus {
+      box-shadow: 0 0 8px #ff6f61;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px 10px 10px 0;
+      background: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out, background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff4c3b;
+      transform: translateY(-2px);
+    }
+
+    pre {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      max-height: 300px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Loader animation */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .loader {
+      width: 28px;
+      height: 28px;
+      border: 4px solid #ff6f61;
+      border-top: 4px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h2>✨ Your Summarizer</h2>
+
+  <div class="options">
+    <select id="summary-type">
+      <option value="brief">🌟 Brief</option>
+      <option value="detailed">📄 Detailed</option>
+      <option value="bullets">🔹 Bullet Points</option>
+    </select>
+  </div>
+
+  <button id="Summarize">🧠 Summarize</button>
+  <button id="copy-btn">📋 Copy</button>
+
+  <pre id="result">Select a type and click Summarize...</pre>
+
+  <script src="popup.js"></script>
+</body>
+</html>
